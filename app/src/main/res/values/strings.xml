@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My first app</string>
+    <string name="text_hint">Enter email address</string>
+    <string name="to_message">To:</string>
+    <string name="send">Send message</string>
+    <string name="name">Name</string>
+    <string name="address">address</string>
+    <string name="default_value">Default value</string>
+
+    <string-array name="beer_type">
+        <item>brown</item>
+        <item>dark</item>
+        <item>light</item>
+        <item>kozel</item>
+        <item>baltika</item>
+        <item>govno baltika</item>
+    </string-array>
+
+</resources>
