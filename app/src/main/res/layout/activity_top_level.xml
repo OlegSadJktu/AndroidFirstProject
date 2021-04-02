@@ -23,7 +23,38 @@
             app:layout_constraintTop_toBottomOf="@id/image_logo"
             />
 
+    <TextView
+            android:id="@+id/data_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/list_options"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="test"
 
+            />
+
+    <EditText
+            android:id="@+id/data_entry"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:gravity="top|left"
+            app:layout_constraintTop_toBottomOf="@id/data_string"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/save_button"
+            android:hint="Some hint"
+            />
+    <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save text"
+            android:onClick="saveMessage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

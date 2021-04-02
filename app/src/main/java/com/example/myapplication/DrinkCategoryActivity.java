@@ -42,7 +42,7 @@ public class DrinkCategoryActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, "ОЛЕГ Я ЛЮБЛЮ ТЕБЯ!!!!1!!!11!!!1");
+        intent.putExtra(Intent.EXTRA_TEXT, "HELLO WORLD");
         startActivity(intent);
 
     }

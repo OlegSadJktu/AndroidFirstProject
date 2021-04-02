@@ -3,16 +3,13 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class TopLevelActivity extends AppCompatActivity {
 
@@ -35,6 +32,22 @@ public class TopLevelActivity extends AppCompatActivity {
         };
         ListView listView = (ListView) findViewById(R.id.list_options);
         listView.setOnItemClickListener(itemClickListener);
+
+        TextView textView = findViewById(R.id.data_string);
+
+        String savedMessage = DataService.getRemebmeredMessage(this);
+        if (!savedMessage.equals("null")) {
+            textView.setText(savedMessage);
+        }
+
+
+    }
+
+    public void saveMessage(View view){
+        EditText entry = findViewById(R.id.data_entry);
+        DataService.rememberMessage( this, entry.getText().toString());
+
+
     }
 
 }
