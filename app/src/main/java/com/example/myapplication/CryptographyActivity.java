@@ -54,11 +54,26 @@ public class CryptographyActivity extends AppCompatActivity {
         decryptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                outputString = decryptText();
+                try {
+                    outputString = decryptText(encryptionText.getText().toString(), passwordInput.getText().toString());
+                    decryptionText.setText(outputString);
+                } catch (Exception e) {
+                    decryptionText.setText("Invalid key");
+                }
             }
         });
 
 
+
+    }
+
+    private String decryptText(String text, String password) throws Exception {
+        SecretKeySpec key = generateKey(password);
+        Cipher c = Cipher.getInstance(AES);
+        c.init(Cipher.DECRYPT_MODE, key);
+        byte[] decValueArray = Base64.getDecoder().decode(text);
+        byte[] decValue = c.doFinal(decValueArray);
+        return new String(decValue);
 
     }
 
