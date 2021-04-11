@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.IBinder;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -22,8 +23,13 @@ public class TopLevelActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 System.out.println(position);
+                Intent intent;
                 if (position == 0) {
-                    Intent intent = new Intent(TopLevelActivity.this, DrinkCategoryActivity.class);
+                    intent = new Intent(TopLevelActivity.this, DrinkCategoryActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 1) {
+                    intent = new Intent(TopLevelActivity.this, CryptographyActivity.class);
                     startActivity(intent);
                 }
 

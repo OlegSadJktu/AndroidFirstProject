@@ -7,6 +7,11 @@
     <string name="address">address</string>
     <string name="default_value">Default value</string>
 
+    <string name="type_here">Type text here</string>
+    <string name="encrypt">Encrypt text</string>
+    <string name="decrypt">Decrypt text</string>
+
+
     <string-array name="main_menu">
         <item>Drinks</item>
         <item>Food</item>
@@ -27,5 +32,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="type_the_password">Password here</string>
 
 </resources>

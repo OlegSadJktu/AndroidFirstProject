@@ -7,13 +7,28 @@
         android:padding="20dp"
         tools:context=".DrinkCategoryActivity">
 
+    <EditText
+            android:id="@+id/edit_sending_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:autofillHints="@string/address"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="@string/type_here"
+            android:gravity="top|start"
+
+            android:inputType="text" />
+
+
+
     <Button
             android:id="@+id/myButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/send"
             android:onClick="sendMessage"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_sending_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             />
